@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# AverageByGroup
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of AverageByGroup is to take in a dataset, and produce a tibble containing calculated averages of a numerical variable, grouped according to a categorical variable. This package is dependent on the tidyverse and dplyr packages. 
+
+## Installation
+
+You can install the development version of AverageByGroup like so:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("https://github.com/stat545ubc-2023/AverageByGroup.git", ref = "0.1.0")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(AverageByGroup)
+#Here using the iris dataset, I will find the average of the petal width for each species
+average_by_group(iris, Species, Petal.Width)
+#the same can be done for a different dataset and different variables
+average_by_group(PlantGrowth, group, weight)
+```

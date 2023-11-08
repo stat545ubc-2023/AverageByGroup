@@ -1,12 +1,17 @@
 Package: AverageByGroup
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Average a numerical variable across a group of categorical variables
+Version: 0.1.0
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Apsara", "Srinivas", , "apsara.srinivas@gmail.com", role = c("aut", "cre"))
+Description: This package contains the average_by_group function, which takes in a dataset, and produces a tibble containing calculated averages of a numerical variable, grouped according to a categorical variable. This package is dependent on the tidyverse and dplyr packages. 
+License: MIT + file LICENSE
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
+Roxygen: list(markdown= TRUE)
 RoxygenNote: 7.2.3
+Imports: 
+    dplyr,
+    magrittr,
+    tidyverse
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
